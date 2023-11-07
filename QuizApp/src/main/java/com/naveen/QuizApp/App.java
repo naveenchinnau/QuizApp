@@ -8,6 +8,24 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+		try
+		{
+			ServiceManager.service();
+		}
+		
+		catch(InvalidInputException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
+
+		finally
+		{
+			System.out.println("Thank you for using the Application");
+		}
+		
     }
 }
